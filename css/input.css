@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* for custom scrollbar  */
+
+::-webkit-scrollbar {
+    width: 8px;  
+    height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  
+    border-radius: 10px;   
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;      
+    border-radius: 10px;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;     
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* for dragging item  */
+.dragging{
+    background-color: rgb(253, 255, 244);
+  }
+
+.dragging:hover{
+    background-color: rgb(253, 255, 244);
+  }

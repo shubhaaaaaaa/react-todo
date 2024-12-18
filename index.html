@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/output.css">
+    <body>
+        
+    <main class="mx-auto my-12 w-1/2 bg-yellow">
+
+        <header class="flex items-center justify-around bg-[#4f432b] py-4 text-[#fffcf5] rounded-t-lg">
+            <!-- <i class="fa-solid fa-bars text-xl cursor-pointer" onclick="openSidebar()"></i> -->
+             <img src="logo.png" alt="logo" width="30px">
+            <h1 class="text-3xl font-bold">To-Do</h1>
+            <i class="fa-regular fa-pen-to-square text-xl cursor-pointer" onclick="toggleModal()"></i>
+        </header>
+
+        <div class="bg-[#fcefb4] flex justify-around">
+            <div class="flex-1 text-center border py-2" id="filter-pending">Pending</div>
+            <div class="flex-1 text-center underline  py-2" id="filter-all">All</div>
+            <div class="flex-1 text-center  py-2" id="filter-done">Done</div>
+        </div>
+
+        
+        <div class="h-[450px] overflow-y-scroll scroll-smooth bg-[#fdf8e1] py-6 px-8 rounded-b-lg">
+            <h2 id="date" class="font-semibold text-center pb-2"></h2>
+            <table class="text-sm font-light mx-auto">
+                <tbody id="js-table-list"></tbody>
+            </table>
+        </div>
+
+        <div id="js-modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 justify-center items-start pt-20 backdrop-blur-sm ">
+            <div class="p-6 rounded-lg bg-[#fdf8e1]">
+                <h1 class="text-[#4f432b] font-bold">Add a new task</h1>
+                <input type="text" placeholder="Start adding...." class="border rounded-md px-5 py-2 mr-5 " id="js-user-input">
+                <button onclick="addButtonModal()" class="mt-4 px-4 py-2 border rounded-md bg-white">Add</button>
+            </div>
+        </div>
+
+        <div class="bg-[#4f432b] text-[#fffcf5] text-center rounded-b-lg">
+            <span class="text-sm">
+                &copy; <span class="get-year"></span>
+                <a
+                    href="https://www.shubhakhadgi.com.np"
+                    target="_blank"
+                >
+                    Shubha Khadgi
+                </a>
+            </span>
+        </div>                             
+        
+    </main>
+
+</body>
+<script type="module" src="script.js"></script>
+<script type="module" src="js/modal.js"></script>
+<script type="module" src="js/date.js"></script>
+<script type="module" src="js/filter.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+</html>
